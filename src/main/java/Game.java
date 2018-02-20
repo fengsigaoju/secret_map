@@ -125,7 +125,7 @@ public class Game extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         try {
-            //UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
+            UIManager.setLookAndFeel("com.jtattoo.plaf.mint.MintLookAndFeel");
             new Game();
         }
         catch (Exception ex) {

@@ -161,12 +161,7 @@ public class Puzzle extends JPanel implements MouseListener {
                             (int) ((j + 1) * destWidth), (int) ((i + 1) * destHeight));
                     Image img = Toolkit.getDefaultToolkit().createImage(
                             new FilteredImageSource(imageInstance.getSource(), imageFilter));
-                    BufferedImage tag = new BufferedImage((int) destWidth, (int) destHeight,
-                            BufferedImage.TYPE_INT_RGB);
-                    Graphics g = tag.getGraphics();
-                    g.drawImage(img, 0, 0, null); // 绘制缩小后的图
-                    g.dispose();
-                    image[j + 1 + i * m] = new ImageIcon(tag);
+                    image[j + 1 + i * m] = new ImageIcon(img);
                 }
             }
         } catch (Exception e) {
